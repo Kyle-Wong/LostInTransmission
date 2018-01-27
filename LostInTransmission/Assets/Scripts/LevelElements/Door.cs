@@ -36,13 +36,13 @@ public class Door : MonoBehaviour {
     }
     public void openDoor()
     {
-        col.enabled = true;
+        col.enabled = false;
         state.setState(openState);
         colorLerp.startColorChange(1);
     }
     public void closeDoor()
     {
-        col.enabled = false;
+        col.enabled = true;
         state.setState(closedState);
         colorLerp.startColorChange(-1);
 

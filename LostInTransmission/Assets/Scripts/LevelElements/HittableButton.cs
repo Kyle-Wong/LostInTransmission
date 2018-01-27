@@ -59,6 +59,16 @@ public class HittableButton : MonoBehaviour {
             }
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+		if (hitByLayer == (hitByLayer | (1 << collision.gameObject.layer)))
+		{
+			if (state.getState() == ACTIVE && !flipFlopOnHit)
+			{
+				deactivateButton();
+			}
+		}
+    }
     public void activateButton()
     {
         state.setState(ACTIVE);

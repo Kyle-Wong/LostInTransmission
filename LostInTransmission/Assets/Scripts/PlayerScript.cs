@@ -12,11 +12,15 @@ public class PlayerScript : MonoBehaviour {
     private bool crouching = false;
     private float inputY = 0;
     public bool beingControlled = true;
-    public bool flipped = false;
+    private bool flipped = false;
+    private GameObject sprite;
+    private Vector2 size;
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
         jumpForce = jumpForce * rigidBody.gravityScale;
+        sprite = transform.Find("Sprite").gameObject;
+        size = transform.localScale;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -47,10 +51,10 @@ public class PlayerScript : MonoBehaviour {
             if (rigidBody.velocity.y < 0 && inputY > -.8f) {
                 rigidBody.velocity += Vector2.down * 6;
             }
-            transform.localScale = new Vector2(1.05f, .75f);
+            transform.localScale = new Vector2(1.05f * this.size.x, .75f*this.size.y);
             crouching = true;
         } else {
-            transform.localScale = new Vector2(1f, 1f);
+            transform.localScale = this.size;
             crouching = false;
         }
         if (!flipped) {
@@ -59,6 +63,7 @@ public class PlayerScript : MonoBehaviour {
         inputY = vertical;
         vx = horizontal * speed;
         if (crouching && grounded) {
+            vx = 0;
 			rigidBody.velocity += (-rigidBody.velocity.x) * Vector2.right / 10;
 		} else {
             rigidBody.velocity += (vx - rigidBody.velocity.x) * Vector2.right / 3;
@@ -70,6 +75,7 @@ public class PlayerScript : MonoBehaviour {
         //} else {
         //    transform.rotation = Quaternion.identity;
         //}
+        sprite.transform.rotation = Quaternion.Euler(0, 0, rigidBody.velocity.x * Mathf.Cos(Time.time*15));
 	}
     private void OnCollisionEnter2D(Collision2D collision) {
         grounded = true;
