@@ -76,15 +76,23 @@ public class PlayerScript : MonoBehaviour {
         //} else {
         //    transform.rotation = Quaternion.identity;
         //}
-        sprite.transform.rotation = Quaternion.Euler(0, 0, rigidBody.velocity.x * Mathf.Cos(Time.time*15));
+        sprite.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, rigidBody.velocity.x * Mathf.Cos(Time.time*15));
 	}
     private void OnCollisionEnter2D(Collision2D collision) {
         grounded = true;
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (grabbablesLayer == (grabbablesLayer | (1 << collision.gameObject.layer)))
+            {
+                collision.gameObject.transform.position = transform.position + new Vector3(-.5f * transform.localScale.x, .5f, 0);
+                collision.gameObject.transform.parent = transform;
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(grabbablesLayer == (grabbablesLayer | (1 << collision.gameObject.layer))) {
-            collision.gameObject.transform.parent = transform;
-        }
     }
 }
