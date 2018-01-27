@@ -65,14 +65,14 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HBound: 1
-    - _LBound: 0.5
+    - _LBound: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Phase: 20
+    - _Phase: 30
     - _Shift: 0
-    - _Slices: 1
+    - _Slices: 4
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -80,5 +80,5 @@ Material:
     - _Width: 0.1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.4705882, b: 0.0032454096, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
