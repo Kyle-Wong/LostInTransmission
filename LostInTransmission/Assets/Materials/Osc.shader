@@ -11,6 +11,7 @@
 		_Shift ("Shift", float) = 0.
 		_LBound ("Low", float) = 0.
 		_HBound ("High", float) = 1.
+		_Color ("Color", Color) = (1., 0., 0., 1.)
 	}
 	SubShader
 	{
@@ -22,8 +23,6 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			// make fog work
-			#pragma multi_compile_fog
 			
 			#include "UnityCG.cginc"
 
@@ -50,13 +49,13 @@
 			float _Shift;
 			float _LBound;
 			float _HBound;
+			fixed4 _Color;
 			
 			v2f vert (appdata v)
 			{
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
 			}
 
@@ -74,14 +73,12 @@
 				float2 uv = float2(i.uv.x, ((uint(i.uv.y * _ScreenParams.y) % s_y) * _Slices) / _ScreenParams.y);
 
 				fixed3 col = fixed3(0., 0., 0.);
-				fixed3 base_col = fixed3(1., 0., 0.);
+				fixed3 base_col = _Color.xyz;
 				
 				float wave = periodic(uv.x, _Amp, _Freq, _Time * _Phase, _Shift, _LBound, _HBound) * .5;
 
 				col += base_col -  smoothstep( 0.0, _Width, abs(wave - uv.y + 0.1) );
 
-				// apply fog
-				UNITY_APPLY_FOG(i.fogCoord, fixed4(col, 1.));
 				return fixed4(col, 1.);
 			}
 			ENDCG
