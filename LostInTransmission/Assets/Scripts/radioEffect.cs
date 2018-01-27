@@ -13,7 +13,7 @@ public class radioEffect : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.Rotate(new Vector3(0,0,6));
-        float scale = 1+Mathf.Cos(Time.time * 4)/10;
-        transform.localScale = new Vector2(size.x * scale, size.y * scale);
+        //float scale = 1+Mathf.Cos(Time.time * 4)/10;
+        //transform.localScale = new Vector2(size.x * scale, size.y * scale);
 	}
 }
