@@ -241,9 +241,10 @@ public class CharacterController2D : MonoBehaviour
 	/// <param name="deltaMovement">Delta movement.</param>
 	public void move( Vector3 deltaMovement )
 	{
-		// save off our current grounded state which we will use for wasGroundedLastFrame and becameGroundedThisFrame
-		collisionState.wasGroundedLastFrame = collisionState.below;
 
+            // save off our current grounded state which we will use for wasGroundedLastFrame and becameGroundedThisFrame
+            collisionState.wasGroundedLastFrame = collisionState.below;
+            
 		// clear our state
 		collisionState.reset();
 		_raycastHitsThisFrame.Clear();
@@ -252,8 +253,8 @@ public class CharacterController2D : MonoBehaviour
 		primeRaycastOrigins();
 
 
-		// first, we check for a slope below us before moving
-		// only check slopes if we are going down and grounded
+            // first, we check for a slope below us before moving
+            // only check slopes if we are going down and grounded
 		if( deltaMovement.y < 0f && collisionState.wasGroundedLastFrame )
 			handleVerticalSlope( ref deltaMovement );
 
@@ -355,7 +356,6 @@ public class CharacterController2D : MonoBehaviour
 		var rayDistance = Mathf.Abs( deltaMovement.x ) + _skinWidth;
 		var rayDirection = isGoingRight ? Vector2.right : -Vector2.right;
 		var initialRayOrigin = isGoingRight ? _raycastOrigins.bottomRight : _raycastOrigins.bottomLeft;
-
 		for( var i = 0; i < totalHorizontalRays; i++ )
 		{
 			var ray = new Vector2( initialRayOrigin.x, initialRayOrigin.y + i * _verticalDistanceBetweenRays );
@@ -368,10 +368,9 @@ public class CharacterController2D : MonoBehaviour
 				_raycastHit = Physics2D.Raycast( ray, rayDirection, rayDistance, platformMask );
 			else
 				_raycastHit = Physics2D.Raycast( ray, rayDirection, rayDistance, platformMask & ~oneWayPlatformMask );
-
 			if( _raycastHit )
 			{
-				// the bottom ray can hit a slope but no other ray can so we have special handling for these cases
+                    // the bottom ray can hit a slope but no other ray can so we have special handling for these cases
 				if( i == 0 && handleHorizontalSlope( ref deltaMovement, Vector2.Angle( _raycastHit.normal, Vector2.up ) ) )
 				{
 					_raycastHitsThisFrame.Add( _raycastHit );
@@ -417,11 +416,11 @@ public class CharacterController2D : MonoBehaviour
 		if( Mathf.RoundToInt( angle ) == 90 )
 			return false;
 
-		// if we can walk on slopes and our angle is small enough we need to move up
+            // if we can walk on slopes and our angle is small enough we need to move up
 		if( angle < slopeLimit )
 		{
-			// we only need to adjust the deltaMovement if we are not jumping
-			// TODO: this uses a magic number which isn't ideal! The alternative is to have the user pass in if there is a jump this frame
+                // we only need to adjust the deltaMovement if we are not jumping
+                // TODO: this uses a magic number which isn't ideal! The alternative is to have the user pass in if there is a jump this frame
 			if( deltaMovement.y < jumpingThreshold )
 			{
 				// apply the slopeModifier to slow our movement up the slope

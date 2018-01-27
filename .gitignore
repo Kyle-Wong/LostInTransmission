@@ -32,3 +32,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+LostInTransmission/.vs/LostInTransmission/v15/Server/sqlite3/storage.ide-wal
+LostInTransmission/.vs/LostInTransmission/v15/Server/sqlite3/storage.ide-shm
+LostInTransmission/.vs/LostInTransmission/v15/Server/sqlite3/storage.ide
+LostInTransmission/.vs/LostInTransmission/v15/Server/sqlite3/db.lock
