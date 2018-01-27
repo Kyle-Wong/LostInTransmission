@@ -17,6 +17,10 @@ public class PlayerScript : MonoBehaviour {
     private GameObject sprite;
     private Vector2 size;
     private GameObject indicator;
+    public Transform soulPrefab;
+    private GameObject otherPlayer;
+    public float switchDelay;
+    private float switchTimer;
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -24,6 +28,14 @@ public class PlayerScript : MonoBehaviour {
         sprite = transform.Find("Sprite").gameObject;
         indicator = transform.Find("Indicator").gameObject;
         size = transform.localScale;
+        foreach(GameObject g in GameObject.FindGameObjectsWithTag("Player")){
+            if(g.name != gameObject.name)
+            {
+                otherPlayer = g;
+                break;
+            }
+        }
+        switchTimer = 0;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -40,9 +52,16 @@ public class PlayerScript : MonoBehaviour {
         if (Mathf.Abs(horizontal) > .2f) {
             flipped = horizontal < 0;
         }
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        if (Input.GetKeyDown(KeyCode.Z) && switchTimer <= 0) {
+            switchTimer = switchDelay;
+            if(beingControlled)
+                spawnSoul();
             beingControlled = !beingControlled;
         }
+        if(switchTimer > 0)
+        {
+            switchTimer -= Time.deltaTime;
+        }  
         if (jumpDown && grounded) {
             rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             grounded = false;
@@ -105,5 +124,10 @@ public class PlayerScript : MonoBehaviour {
     public Vector2 getVel()
     {
         return rigidBody.velocity;
+    }
+    private void spawnSoul()
+    {
+        GameObject soul = Instantiate(soulPrefab, transform.position, transform.rotation).gameObject;
+        soul.GetComponent<MoveToPoint>().setTarget(otherPlayer.transform);
     }
 }
