@@ -5,9 +5,8 @@ using UnityEngine;
 public class Elevator : MonoBehaviour {
 
 
-    public bool linkStateToObject = false;
     public State linkedState;
-    public State playerDetector;
+ 
     public int ACTIVE_STATE = 1;
     public int INACTIVE_STATE = 0;
     private List<Transform> occupants;
@@ -24,25 +23,15 @@ public class Elevator : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (linkStateToObject)
-        {
-            if (linkedState.getState() == ACTIVE_STATE && playerDetector.getState() == ACTIVE_STATE)
+        
+            if (linkedState.getState() == ACTIVE_STATE)
             {
                 movePlatform(endNode.position);
             } else
             {
                 movePlatform(startNode.position);
             }
-        } else
-        {
-            if(playerDetector.getState() == ACTIVE_STATE)
-            {
-                movePlatform(endNode.position);
-            } else
-            {
-                movePlatform(startNode.position);
-            }
-        }
+        
         
     }
     
