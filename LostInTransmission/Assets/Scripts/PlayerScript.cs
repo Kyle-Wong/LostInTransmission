@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,11 +16,13 @@ public class PlayerScript : MonoBehaviour {
     private bool flipped = false;
     private GameObject sprite;
     private Vector2 size;
+    private GameObject indicator;
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
         jumpForce = jumpForce * rigidBody.gravityScale;
         sprite = transform.Find("Sprite").gameObject;
+        indicator = transform.Find("Indicator").gameObject;
         size = transform.localScale;
 	}
 	// Update is called once per frame
@@ -77,6 +79,7 @@ public class PlayerScript : MonoBehaviour {
         //    transform.rotation = Quaternion.identity;
         //}
         sprite.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, rigidBody.velocity.x * Mathf.Cos(Time.time*15));
+        indicator.SetActive(beingControlled);
 	}
     private void OnCollisionEnter2D(Collision2D collision) {
         grounded = true;
