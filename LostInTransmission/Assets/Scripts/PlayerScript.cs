@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour {
     private bool crouching = false;
     private float inputY = 0;
     public bool beingControlled = true;
+    public LayerMask grabbablesLayer;
     private bool flipped = false;
     private GameObject sprite;
     private Vector2 size;
@@ -79,5 +80,11 @@ public class PlayerScript : MonoBehaviour {
 	}
     private void OnCollisionEnter2D(Collision2D collision) {
         grounded = true;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(grabbablesLayer == (grabbablesLayer | (1 << collision.gameObject.layer))) {
+            collision.gameObject.transform.parent = transform;
+        }
     }
 }
