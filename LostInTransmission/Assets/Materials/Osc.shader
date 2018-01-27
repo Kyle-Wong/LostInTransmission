@@ -52,7 +52,6 @@
 			{
 				// Modified and adapted to CGPROGRAM from a shader created by inigo quilez - iq/2013: https://www.shadertoy.com/view/Xds3Rr
                 // License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
-				// sample the texture
 				fixed3 col = fixed3(0., 0., 0.);
 				fixed3 base_col = fixed3(1., 0., 0.);
 
