@@ -95,4 +95,12 @@ public class PlayerScript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
     }
+    public int getDirection()
+    {
+        return (flipped) ? -1 : 1;
+    }
+    public Vector2 getVel()
+    {
+        return rigidBody.velocity;
+    }
 }
