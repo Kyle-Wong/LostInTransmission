@@ -30,7 +30,9 @@ public class PlayerScript : MonoBehaviour {
             jumpDown = Input.GetButtonDown("Jump");
             jumpUp = Input.GetButtonUp("Jump");
         }
-        if (Mathf.Abs(horizontal) > .2f) flipped = horizontal < 0;
+        if (Mathf.Abs(horizontal) > .2f) {
+            flipped = horizontal < 0;
+        }
         if (Input.GetKeyDown(KeyCode.Z)) {
             beingControlled = !beingControlled;
         }
@@ -50,6 +52,9 @@ public class PlayerScript : MonoBehaviour {
         } else {
             transform.localScale = new Vector2(1f, 1f);
             crouching = false;
+        }
+        if (!flipped) {
+            transform.localScale -= transform.localScale.x * Vector3.right * 2;
         }
         inputY = vertical;
         vx = horizontal * speed;
