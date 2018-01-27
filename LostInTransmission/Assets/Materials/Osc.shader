@@ -76,7 +76,7 @@
 				fixed3 col = fixed3(0., 0., 0.);
 				fixed3 base_col = fixed3(1., 0., 0.);
 				
-				float wave = periodic(uv.x, _Amp, _Freq, _Time * _Amp, _Shift, _LBound, _HBound) * .5;
+				float wave = periodic(uv.x, _Amp, _Freq, _Time * _Phase, _Shift, _LBound, _HBound) * .5;
 
 				col += base_col -  smoothstep( 0.0, _Width, abs(wave - uv.y + 0.1) );
 
