@@ -50,16 +50,16 @@
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
+				// Modified and adapted to CGPROGRAM from a shader created by inigo quilez - iq/2013: https://www.shadertoy.com/view/Xds3Rr
+                // License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
 				// sample the texture
 				fixed3 col = fixed3(0., 0., 0.);
 				fixed3 base_col = fixed3(1., 0., 0.);
 
 				float wave = periodic(i.uv.x, .2, 20., _Time * 20., .5, 1.) * .5;
 				
-				// convert frequency to colors
 				float width = .01;
 
-				// add wave form on top	
 				col += base_col -  smoothstep( 0.0, width, abs(wave - i.uv.y + 0.1) );
 
 				// apply fog
