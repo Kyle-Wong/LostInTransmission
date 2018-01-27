@@ -17,6 +17,7 @@ public class HittableButton : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     public Color activeColor;
     public Color inactiveColor;
+    private int currentCollisions = 0;
 	void Start () {
         state = GetComponent<State>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -49,6 +50,7 @@ public class HittableButton : MonoBehaviour {
 
         if(hitByLayer == (hitByLayer | (1 << collision.gameObject.layer)))
         {
+            currentCollisions++;
             if(state.getState() == ACTIVE && flipFlopOnHit)
             {
                 deactivateButton();
@@ -63,9 +65,12 @@ public class HittableButton : MonoBehaviour {
     {
 		if (hitByLayer == (hitByLayer | (1 << collision.gameObject.layer)))
 		{
+            currentCollisions--;
 			if (state.getState() == ACTIVE && !flipFlopOnHit)
 			{
-				deactivateButton();
+                if(currentCollisions<=0) {
+					deactivateButton();
+				}
 			}
 		}
     }
