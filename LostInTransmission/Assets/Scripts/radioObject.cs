@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class radioObject : MonoBehaviour {
 
-    public LayerMask hitByLayer;
     private Transform sceneParent;
+    private GameObject waveEffect;
+    private Vector2 maxSize;
+    private Vector2 size;
+
 	// Use this for initialization
 	void Start () {
         sceneParent = transform.parent;
+        waveEffect = transform.Find("waveEffect").gameObject;
+        maxSize = waveEffect.transform.localScale;
+        size = new Vector2(1, 1);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.X)) {
-            transform.parent = sceneParent;
-        }
-	}
-
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (hitByLayer == (hitByLayer | (1 << collision.gameObject.layer)))
-		{
-            transform.position = collision.gameObject.transform.position + new Vector3(-.5f*collision.gameObject.transform.localScale.x, .5f, 0);
-			transform.parent = collision.gameObject.transform;
+        if(transform.parent == sceneParent) {
+            size += (new Vector2(0, 0) - size) / 10;
+        } else {
+            size += (new Vector2(maxSize.x, maxSize.y) - size) / 10;
 		}
+		waveEffect.transform.localScale = size;
 	}
 }
