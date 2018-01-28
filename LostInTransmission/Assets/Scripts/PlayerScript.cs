@@ -1,4 +1,4 @@
-﻿﻿﻿using System.Collections;
+﻿﻿﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -123,6 +123,20 @@ public class PlayerScript : MonoBehaviour {
             grounded = true;
             animator.SetBool("Fall", false);
             animator.SetBool("Jump", false);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (grabbablesLayer == (grabbablesLayer | (1 << collision.gameObject.layer)))
+            {
+                collision.gameObject.transform.position = transform.position + new Vector3(-.5f * transform.localScale.x, .5f, 0);
+                collision.gameObject.transform.parent = transform;
+            } else if (collision.CompareTag("Lever"))
+            {
+                collision.GetComponent<Lever>().flipLever();
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

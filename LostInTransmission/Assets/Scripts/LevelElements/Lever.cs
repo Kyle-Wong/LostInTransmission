@@ -7,12 +7,13 @@ public class Lever : MonoBehaviour {
     // Use this for initialization
     private State state;
     private const int ACTIVE = 1;
-    private const int INACTIVE = -1;
+    private const int INACTIVE = 0;
     public Sprite activeSprite;
     public Sprite inactiveSprite;
     SpriteRenderer spriteRenderer;
 	void Start () {
-		
+        state = GetComponent<State>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
