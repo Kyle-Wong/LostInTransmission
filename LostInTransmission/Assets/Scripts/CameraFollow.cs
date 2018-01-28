@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -48,13 +48,17 @@ public class CameraFollow : MonoBehaviour {
 
 		new_pos = Vector2.Dot(before_translate_dir, after_translate_dir) >= 0 ?  new_pos :
 		                                                                         playerPos;
-		var verticalSize = Camera.main.orthographicSize * 2.0;
-		var horizontalSize = verticalSize * Screen.width / Screen.height;
-
-        new_pos.x = Mathf.Clamp(new_pos.x, min.x, max.x);
-        new_pos.y = Mathf.Clamp(new_pos.y, min.y, max.y);
+        new_pos = ClampPos(new_pos);
 		transform.position = new Vector3(new_pos.x, new_pos.y, transform.position.z);
 	}
+
+    private Vector2 ClampPos(Vector2 new_pos) {
+		float verticalSize = Camera.main.orthographicSize * 2.0f;
+		float horizontalSize = verticalSize * Screen.width / Screen.height;
+		new_pos.x = Mathf.Clamp(new_pos.x, min.x + horizontalSize / 2, max.x - horizontalSize / 2);
+		new_pos.y = Mathf.Clamp(new_pos.y, min.y + verticalSize / 2, max.y - verticalSize / 2);
+        return new_pos;
+    }
 
 	public CameraFollow getInstance() {
 		if(_instance == null)
