@@ -19,6 +19,7 @@ public class LoadNextLevel : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag != "Player") return;
         if (!playerList.Contains(collision.gameObject))
         {
             playerList.Add(collision.gameObject);

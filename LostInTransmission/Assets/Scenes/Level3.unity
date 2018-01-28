@@ -507,35 +507,6 @@ Prefab:
       propertyPath: linkedState
       value: 
       objectReference: {fileID: 330510761}
-    - target: {fileID: 4210498830082558, guid: a883bfffb8979514fbea2b6dffbbd79d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.1816137
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210498830082558, guid: a883bfffb8979514fbea2b6dffbbd79d, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.1816137
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210498830082558, guid: a883bfffb8979514fbea2b6dffbbd79d, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.1816137
-      objectReference: {fileID: 0}
-    - target: {fileID: 114837319425492070, guid: a883bfffb8979514fbea2b6dffbbd79d,
-        type: 2}
-      propertyPath: linkStateToObject
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972510195363916, guid: a883bfffb8979514fbea2b6dffbbd79d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649272538739214, guid: a883bfffb8979514fbea2b6dffbbd79d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817836205233792, guid: a883bfffb8979514fbea2b6dffbbd79d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -10.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1074745587129744, guid: a883bfffb8979514fbea2b6dffbbd79d, type: 2}
       propertyPath: m_Name
       value: ConstantMovingPlatform (3)
@@ -813,7 +784,7 @@ GameObject:
   - component: {fileID: 1717350186}
   - component: {fileID: 1717350185}
   - component: {fileID: 1717350184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
