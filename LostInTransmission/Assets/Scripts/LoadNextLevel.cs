@@ -28,6 +28,11 @@ public class LoadNextLevel : MonoBehaviour {
         }
         if (playerList.Count >= 2)
         {
+            GameObject npc = GameObject.Find("NPC");
+            if(npc != null && npc.GetComponent<NPCFollow>().followingPlayer)
+            {
+                GameData.npcsSaved[levelNumber-1] = 1;
+            }
             if (forceOverride)
             {
                 StartCoroutine(SceneController.transitionThenLoad(overrideLevelName, 0.3f, true));

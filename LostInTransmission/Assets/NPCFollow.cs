@@ -5,7 +5,8 @@ using UnityEngine;
 public class NPCFollow : MonoBehaviour {
 
     // Use this for initialization
-    private bool followingPlayer;
+    [HideInInspector]
+    public bool followingPlayer;
     private PlayerScript player;
     public float followDistance;
     private bool flipped;
