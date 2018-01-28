@@ -7724,7 +7724,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 5.1039877
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7763,7 +7763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c2689fef26bbf4691d90a50979fe60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 10
 --- !u!114 &1043989192 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114074006150094398, guid: c78c8f48974a0486097a0ecbd911cce3,
@@ -7851,11 +7851,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1088304801363460, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114131155716718024, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1195390782
@@ -7997,11 +7994,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4677222320752956, guid: 452996667e6c0482aad01361f07f76ee, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -23.928087
+      value: -23.77
       objectReference: {fileID: 0}
     - target: {fileID: 4677222320752956, guid: 452996667e6c0482aad01361f07f76ee, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.1591678
+      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 4677222320752956, guid: 452996667e6c0482aad01361f07f76ee, type: 2}
       propertyPath: m_LocalPosition.z
