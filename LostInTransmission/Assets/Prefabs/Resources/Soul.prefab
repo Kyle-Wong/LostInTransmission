@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAtDestination: 1
-  moveSpeed: 10
+  moveSpeed: 40
   target: {fileID: 0}
 --- !u!198 &198759241673200940
 ParticleSystem:

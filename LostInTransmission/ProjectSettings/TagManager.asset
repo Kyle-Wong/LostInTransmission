@@ -22,9 +22,9 @@ TagManager:
   - Player
   - Grabbable
   - NPC
-  - 
-  - 
-  - 
+  - RedFrequency
+  - GreenFrequency
+  - BlueFrequency
   - 
   - 
   - 

@@ -1,13 +1,13 @@
-﻿﻿﻿using System.Collections;
+﻿﻿﻿﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
-    private float jumpForce = 4f;
+    public float jumpForce = 4f;
     private Rigidbody2D rigidBody;
     private float vx = 0;
-    private float speed = 10f;
+    public float speed = 10f;
     private bool grounded = false;
     private bool crouching = false;
     private float inputY = 0;
@@ -21,6 +21,7 @@ public class PlayerScript : MonoBehaviour {
     private GameObject otherPlayer;
     public float switchDelay;
     private float switchTimer;
+    private Animator animator;
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -28,6 +29,7 @@ public class PlayerScript : MonoBehaviour {
         sprite = transform.Find("Sprite").gameObject;
         indicator = transform.Find("Indicator").gameObject;
         size = transform.localScale;
+        animator = sprite.GetComponent<Animator>();
         foreach(GameObject g in GameObject.FindGameObjectsWithTag("Player")){
             if(g.name != gameObject.name)
             {
@@ -50,7 +52,10 @@ public class PlayerScript : MonoBehaviour {
             jumpUp = Input.GetButtonUp("Jump");
         }
         if (Mathf.Abs(horizontal) > .2f) {
-            flipped = horizontal < 0;
+            flipped = horizontal < .1f;
+            animator.SetBool("Walking", true);
+        } else {
+            animator.SetBool("Walking", false);
         }
         if (Input.GetKeyDown(KeyCode.Z) && switchTimer <= 0) {
             switchTimer = switchDelay;
@@ -66,6 +71,7 @@ public class PlayerScript : MonoBehaviour {
         if (jumpDown && grounded) {
             rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             grounded = false;
+            animator.SetBool("Jump", true);
         }
         if (jumpUp && rigidBody.velocity.y > 0) {
             rigidBody.velocity += (-rigidBody.velocity.y / 2) * Vector2.up;
@@ -74,12 +80,16 @@ public class PlayerScript : MonoBehaviour {
             if (rigidBody.velocity.y < 0 && inputY > -.8f) {
                 rigidBody.velocity += Vector2.down * 6;
             }
-            transform.localScale = new Vector2(1.05f * this.size.x, .75f*this.size.y);
+            //transform.localScale = new Vector2(1.05f * this.size.x, .75f*this.size.y);
+            animator.SetBool("Crouch", true);
+            animator.SetBool("Walking", false);
             crouching = true;
         } else {
-            transform.localScale = this.size;
-            crouching = false;
+			//transform.localScale = this.size;
+			animator.SetBool("Crouch", false);
+			crouching = false;
         }
+        transform.localScale = this.size;
         if (!flipped) {
             transform.localScale -= transform.localScale.x * Vector3.right * 2;
         }
@@ -98,26 +108,26 @@ public class PlayerScript : MonoBehaviour {
         //} else {
         //    transform.rotation = Quaternion.identity;
         //}
-        sprite.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, rigidBody.velocity.x * Mathf.Cos(Time.time*15));
+        //sprite.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, rigidBody.velocity.x * Mathf.Cos(Time.time*15));
         indicator.SetActive(beingControlled);
         if(rigidBody.velocity.y<-rigidBody.gravityScale||rigidBody.velocity.y>1) {
             grounded = false;
         }
+        if (!grounded && rigidBody.velocity.y<0) {
+            animator.SetBool("Jump", false);
+            animator.SetBool("Fall", true);
+        }
 	}
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(rigidBody.velocity.y>=-1)
-		grounded = true;
+        if (rigidBody.velocity.y > -1) {
+            grounded = true;
+            animator.SetBool("Fall", false);
+            animator.SetBool("Jump", false);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            if (grabbablesLayer == (grabbablesLayer | (1 << collision.gameObject.layer)))
-            {
-                collision.gameObject.transform.position = transform.position + new Vector3(-.5f * transform.localScale.x, .5f, 0);
-                collision.gameObject.transform.parent = transform;
-            }
-        }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

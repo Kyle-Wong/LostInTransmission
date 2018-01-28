@@ -40,6 +40,11 @@ public class Grabber : MonoBehaviour {
                 grabbed = collision.gameObject;
                 grabbing = true;
 			}
-		}
-	}
+            if (collision.CompareTag("Lever"))
+            {
+                collision.GetComponent<Lever>().flipLever();
+            }
+        }
+        
+    }
 }

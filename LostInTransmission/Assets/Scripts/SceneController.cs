@@ -9,15 +9,15 @@ public class SceneController : MonoBehaviour {
     // Use this for initialization
     public GraphicColorLerp colorLerp;
 
-	void Awake () {
+	void Start () {
         if (GameData.playSceneIntro)
         {
-            colorLerp.GetComponent<Image>().enabled = true;
+            colorLerp.gameObject.GetComponent<Image>().enabled = true;
             colorLerp.setColors(Color.black, new Color(0, 0, 0, 0));
             colorLerp.startColorChange();
         } else
         {
-            colorLerp.GetComponent<Image>().enabled = false;
+            colorLerp.gameObject.GetComponent<Image>().enabled = false;
         }
 	}
 	
@@ -29,7 +29,7 @@ public class SceneController : MonoBehaviour {
     public static IEnumerator transitionThenLoad(string sceneName, float delay, bool introTransition)
     {
         GraphicColorLerp colorLerp = GameObject.Find("Overlay").GetComponent<GraphicColorLerp>();
-        colorLerp.GetComponent<Image>().enabled = true;
+        colorLerp.gameObject.GetComponent<Image>().enabled = true;
         colorLerp.duration = delay;
         colorLerp.setColors(new Color(0, 0, 0, 0), Color.black);
         colorLerp.startColorChange();
