@@ -11,6 +11,11 @@ public class Grabber : MonoBehaviour {
     private bool newInput = true;
     public float offsetX = -.5f;
     public float offsetY = .5f;
+    public enum OnObject
+    {
+        Player, Terminal
+    }
+    public OnObject thisObject = OnObject.Player;
 	// Use this for initialization
 	void Start () {
         sceneParent = transform.parent;
@@ -29,20 +34,53 @@ public class Grabber : MonoBehaviour {
 		{
 			if (grabbablesLayer == (grabbablesLayer | (1 << collision.gameObject.layer)))
 			{
-				//if(grabbing&&grabbed!=collision.gameObject) {
-				//    grabbed.transform.parent = sceneParent;
-				//}
-				if(grabbing) {
-	                grabbed.transform.parent = sceneParent;
-	            }
-                collision.gameObject.transform.position = transform.position + new Vector3(offsetX * transform.localScale.x, offsetY, 0);
-				collision.gameObject.transform.parent = transform;
-                grabbed = collision.gameObject;
-                grabbing = true;
+                //if(grabbing&&grabbed!=collision.gameObject) {
+                //    grabbed.transform.parent = sceneParent;
+                //}
+                switch (thisObject)
+                {
+                    case (OnObject.Player):
+                        if (transform.GetComponent<PlayerScript>().beingControlled)
+                        {
+                            if (grabbing)
+                            {
+                                grabbed.transform.parent = sceneParent;
+                            }
+                            collision.gameObject.transform.position = transform.position + new Vector3(offsetX * transform.localScale.x, offsetY, 0);
+                            collision.gameObject.transform.parent = transform;
+                            grabbed = collision.gameObject;
+                            grabbing = true;
+                        }
+                        break;
+                    case (OnObject.Terminal):
+                        if (collision.transform.parent.gameObject.GetComponent<PlayerScript>() != null &&
+                            collision.transform.parent.gameObject.GetComponent<PlayerScript>().beingControlled)
+                        {
+                            if (grabbing)
+                            {
+                                grabbed.transform.parent = sceneParent;
+                            }
+                            collision.gameObject.transform.position = transform.position + new Vector3(offsetX * transform.localScale.x, offsetY, 0);
+                            collision.gameObject.transform.parent = transform;
+                            grabbed = collision.gameObject;
+                            grabbing = true;
+                        }
+                        break;
+                }
+				
 			}
             if (collision.CompareTag("Lever"))
             {
-                collision.GetComponent<Lever>().flipLever();
+                switch (thisObject)
+                {
+                    case (OnObject.Player):
+                        if(GetComponent<PlayerScript>().beingControlled)
+                            collision.GetComponent<Lever>().flipLever();
+                        break;
+                    case (OnObject.Terminal):
+                        //terminals can't pull levers
+                        break;
+                }
             }
         }
         

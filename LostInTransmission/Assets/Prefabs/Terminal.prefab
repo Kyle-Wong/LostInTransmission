@@ -183,6 +183,7 @@ MonoBehaviour:
     m_Bits: 4096
   offsetX: 0
   offsetY: 0.5
+  thisObject: 1
 --- !u!114 &114767373748271720
 MonoBehaviour:
   m_ObjectHideFlags: 1

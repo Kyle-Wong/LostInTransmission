@@ -16,14 +16,14 @@ public class RevealPrompt : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerScript>().beingControlled)
         {
             colorLerp.startColorChange(1);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.X))
+        if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.X) && collision.gameObject.GetComponent<PlayerScript>().beingControlled)
         {
             activationLerp.startColorChange(1);
         }
