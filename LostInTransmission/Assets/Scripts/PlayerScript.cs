@@ -50,6 +50,17 @@ public class PlayerScript : MonoBehaviour {
         float vertical = 0;
         bool jumpDown = false;
         bool jumpUp = false;
+        if(Mathf.Abs(rigidBody.velocity.x)>.2f && grounded)
+        {
+            if (!source.isPlaying)
+            {
+                source.Play();
+            }
+        }
+        else
+        {
+            source.Stop();
+        }
         if (beingControlled) {
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");
