@@ -17,10 +17,12 @@ public class HittableButton : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     public Color activeColor;
     public Color inactiveColor;
+    private AudioSource source;
     private int currentCollisions = 0;
 	void Start () {
         state = GetComponent<State>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -79,6 +81,8 @@ public class HittableButton : MonoBehaviour {
         state.setState(ACTIVE);
         if (timedActivation)
             activeTimer = activeDuration;
+        source.PlayOneShot(source.clip);
+
     }
     public void deactivateButton()
     {
