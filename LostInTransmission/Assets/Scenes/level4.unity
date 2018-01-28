@@ -1417,7 +1417,7 @@ Prefab:
     - target: {fileID: 114970670315283542, guid: c78c8f48974a0486097a0ecbd911cce3,
         type: 2}
       propertyPath: hitByLayer.m_Bits
-      value: 256
+      value: 133120
       objectReference: {fileID: 0}
     - target: {fileID: 4487023035870024, guid: c78c8f48974a0486097a0ecbd911cce3, type: 2}
       propertyPath: m_LocalScale.y
