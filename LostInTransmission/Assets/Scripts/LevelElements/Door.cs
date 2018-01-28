@@ -13,10 +13,12 @@ public class Door : MonoBehaviour {
     private BoxCollider2D col;
     private ColorLerp colorLerp;
 
+    Animator anim;
 	void Start () {
         state = GetComponent<State>();
         col = GetComponent<BoxCollider2D>();
         colorLerp = GetComponent<ColorLerp>();
+        anim = GetComponent<Animator>();
 	}
 
     // Update is called once per frame
@@ -39,12 +41,14 @@ public class Door : MonoBehaviour {
         col.enabled = false;
         state.setState(openState);
         colorLerp.startColorChange(1);
+        anim.SetBool("Is_Open", true);
     }
     public void closeDoor()
     {
         col.enabled = true;
         state.setState(closedState);
         colorLerp.startColorChange(-1);
+        anim.SetBool("Is_Open", false);
 
     }
 }
