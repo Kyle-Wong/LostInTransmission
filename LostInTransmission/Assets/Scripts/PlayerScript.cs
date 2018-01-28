@@ -103,7 +103,6 @@ public class PlayerScript : MonoBehaviour {
         if(rigidBody.velocity.y<-rigidBody.gravityScale||rigidBody.velocity.y>1) {
             grounded = false;
         }
-        Debug.Log(rigidBody.velocity.y);
 	}
     private void OnCollisionEnter2D(Collision2D collision) {
         if(rigidBody.velocity.y>=-1)
