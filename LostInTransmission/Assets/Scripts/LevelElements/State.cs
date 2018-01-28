@@ -9,7 +9,7 @@ public class State : MonoBehaviour {
 
 
 	void Awake () {
-
+  
 	}
 	
 	// Update is called once per frame
