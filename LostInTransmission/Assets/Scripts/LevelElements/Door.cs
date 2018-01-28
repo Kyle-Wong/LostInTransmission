@@ -13,12 +13,15 @@ public class Door : MonoBehaviour {
     private BoxCollider2D col;
     private ColorLerp colorLerp;
     public bool useColorLerp = false;
+    AudioSource source;
+
     Animator anim;
 	void Start () {
         state = GetComponent<State>();
         col = GetComponent<BoxCollider2D>();
         colorLerp = GetComponent<ColorLerp>();
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame
@@ -43,6 +46,7 @@ public class Door : MonoBehaviour {
         if(useColorLerp)
             colorLerp.startColorChange(1);
         anim.SetBool("Is_Open", true);
+        source.PlayOneShot(source.clip);
     }
     public void closeDoor()
     {
