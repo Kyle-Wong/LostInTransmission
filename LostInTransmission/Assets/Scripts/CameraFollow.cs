@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
 
+	//NOTE: you will need to query Kyle's delay
 	// Use this for initialization
 	public Transform currentPlayerTransform;
+	private PlayerScript [] players = new PlayerScript[2];
+	public int speed;
+	private float interval;
 	private static CameraFollow _instance;
-	private bool isFollowing = true;
+	private static bool isFollowing = true;
 
 	void Awake() {
+		GameObject[] player_objs = GameObject.FindGameObjectsWithTag("Player");
+		Debug.Assert(player_objs.Length == 2);
+		for(int i = 0; i < 2; ++i) {
+			players[i] = player_objs[i].GetComponent<PlayerScript>();
+			Debug.Assert(players[i] != null);
+		}
+		Debug.Assert(speed != 0);
+		interval = 1 / speed;
+		currentPlayerTransform = players[0].transform;
 		Debug.Assert(currentPlayerTransform);
 	}
-
-	void Start() {
-		Debug.Assert(GameObject.FindWithTag("NewPlayer"));
-		followNewPlayer(GameObject.FindWithTag("NewPlayer"), 1f);
-
-	}
 	
-	private float interval = 1f;
 	// Update is called once per frame
 	void Update () {
+		updatePlayer();
 		Vector2 playerPos = currentPlayerTransform.position;
 		Vector2 cameraPos = transform.position;
 
@@ -49,18 +56,7 @@ public class CameraFollow : MonoBehaviour {
 		return _instance;
 	}
 
-	public void followNewPlayer(GameObject player, float speed) {
-		currentPlayerTransform = player.transform;
-		interval = 1 / speed;
+	private void updatePlayer() {
+		currentPlayerTransform = players[0].beingControlled ? players[0].transform : players[1].transform;
 	}
-
-	// private IEnumerator movePlayer(Transform nextPlayerTransform, Vector2 delta, int intervals) {
-	// 	isFollowing = false;
-	// 	for(int i = 0; i < intervals; ++i) {
-	// 		transform.position += new Vector3(delta.x, delta.y, 0f) * Time.deltaTime;
-	// 		yield return null;
-	// 	}
-	// 	isFollowing = true;
-	// 	currentPlayerTransform = nextPlayerTransform;
-	// }
 }
