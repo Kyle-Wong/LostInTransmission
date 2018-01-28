@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RevealPrompt : MonoBehaviour {
+public class RevealByPlayer : MonoBehaviour {
 
     // Use this for initialization
-    public ReversibleColorLerp colorLerp;
+    TextMeshColorLerp colorLerp;
+
 	void Start () {
+        colorLerp = transform.parent.gameObject.GetComponent<TextMeshColorLerp>();
 	}
 	
 	// Update is called once per frame
@@ -15,19 +17,16 @@ public class RevealPrompt : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") )
+        if (collision.gameObject.CompareTag("Player"))
         {
             colorLerp.startColorChange(1);
         }
     }
-    
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             colorLerp.startColorChange(-1);
-
-        } 
-        
+        }
     }
 }

@@ -30,6 +30,7 @@ public class Grabber : MonoBehaviour {
 
 	private void OnTriggerStay2D(Collider2D collision)
 	{
+
         if (Input.GetKeyDown(KeyCode.X))
 		{
 			if (grabbablesLayer == (grabbablesLayer | (1 << collision.gameObject.layer)))
@@ -50,6 +51,26 @@ public class Grabber : MonoBehaviour {
                             collision.gameObject.transform.parent = transform;
                             grabbed = collision.gameObject;
                             grabbing = true;
+                        }
+                        else
+                        {
+                            try
+                            {
+                                if (collision.transform.parent.gameObject.CompareTag("Player"))
+                                {
+                                    if (grabbing)
+                                    {
+                                        grabbed.transform.parent = sceneParent;
+                                    }
+                                    collision.gameObject.transform.position = transform.position + new Vector3(offsetX * transform.localScale.x, offsetY, 0);
+                                    collision.gameObject.transform.parent = transform;
+                                    grabbed = collision.gameObject;
+                                    grabbing = true;
+                                }
+                            }catch
+                            {
+                                
+                            }
                         }
                         break;
                     case (OnObject.Terminal):
