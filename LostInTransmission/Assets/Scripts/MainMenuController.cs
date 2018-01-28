@@ -38,7 +38,7 @@ public class MainMenuController : MonoBehaviour {
     {
         if (allowInput)
         {
-            StartCoroutine(transitionThenLoad(firstLevel, 0.25f));
+            StartCoroutine(SceneController.transitionThenLoad(firstLevel,0.3f,true));
         }
     }
     public void creditsButtonPress()
