@@ -288,7 +288,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Tina Feng
 --- !u!222 &232510763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Role
+  m_Text: Programmer
 --- !u!222 &250341748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Role
+  m_Text: Programmer/Designer
 --- !u!222 &379652313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Riley Park
 --- !u!222 &409058046
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -710,7 +710,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Role
+  m_Text: Designer
 --- !u!222 &416366467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -784,7 +784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Paul Grad
 --- !u!222 &437480805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1134,7 +1134,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: TJ Hanson
 --- !u!222 &674738959
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1356,7 +1356,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Role
+  m_Text: Designer
 --- !u!222 &922293421
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1430,7 +1430,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Role
+  m_Text: Programmer
 --- !u!222 &922931225
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1578,7 +1578,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Role
+  m_Text: Artist
 --- !u!222 &972218095
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1849,7 +1849,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Role
+  m_Text: Programmer
 --- !u!222 &1204867391
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2106,7 +2106,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Brian Dizon
 --- !u!222 &1508128387
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2293,7 +2293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Derek Giap
 --- !u!222 &1764740618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2613,7 +2613,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Kyle Wong
 --- !u!222 &2010549327
 CanvasRenderer:
   m_ObjectHideFlags: 0
