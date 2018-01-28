@@ -17,6 +17,7 @@ public class NPCFollow : MonoBehaviour {
     public float teleportDistance;
     public Sprite happySprite;
     public Sprite sadSprite;
+    public float yOffset;
 	void Start () {
         spriteRenderer = spriteObject.GetComponent<SpriteRenderer>();
 	}
