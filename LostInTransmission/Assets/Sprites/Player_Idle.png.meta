@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d71474fd023ae8f4e86bb94953a58125
-timeCreated: 1517096661
+timeCreated: 1517098032
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -123,10 +123,10 @@ TextureImporter:
       name: Player_Idle_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 1711
-        width: 303
-        height: 826
+        x: 0
+        y: 1704
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +137,10 @@ TextureImporter:
       name: Player_Idle_1
       rect:
         serializedVersion: 2
-        x: 365
-        y: 1711
-        width: 303
-        height: 826
+        x: 349
+        y: 1704
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,10 +151,10 @@ TextureImporter:
       name: Player_Idle_2
       rect:
         serializedVersion: 2
-        x: 717
-        y: 1711
-        width: 300
-        height: 826
+        x: 698
+        y: 1704
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +165,10 @@ TextureImporter:
       name: Player_Idle_3
       rect:
         serializedVersion: 2
-        x: 1067
-        y: 1711
-        width: 300
-        height: 826
+        x: 1047
+        y: 1704
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: Player_Idle_4
       rect:
         serializedVersion: 2
-        x: 1418
-        y: 1711
-        width: 300
-        height: 826
+        x: 1396
+        y: 1704
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: Player_Idle_5
       rect:
         serializedVersion: 2
-        x: 1768
-        y: 1711
-        width: 299
-        height: 827
+        x: 1745
+        y: 1704
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,10 +207,10 @@ TextureImporter:
       name: Player_Idle_6
       rect:
         serializedVersion: 2
-        x: 2117
-        y: 1712
-        width: 300
-        height: 826
+        x: 2094
+        y: 1704
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: Player_Idle_7
       rect:
         serializedVersion: 2
-        x: 2465
-        y: 1712
-        width: 298
-        height: 826
+        x: 2443
+        y: 1704
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: Player_Idle_8
       rect:
         serializedVersion: 2
-        x: 20
-        y: 859
-        width: 296
-        height: 827
+        x: 0
+        y: 852
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: Player_Idle_9
       rect:
         serializedVersion: 2
-        x: 368
-        y: 859
-        width: 293
-        height: 827
+        x: 349
+        y: 852
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,10 +263,10 @@ TextureImporter:
       name: Player_Idle_10
       rect:
         serializedVersion: 2
-        x: 713
-        y: 859
-        width: 294
-        height: 827
+        x: 698
+        y: 852
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,10 +277,10 @@ TextureImporter:
       name: Player_Idle_11
       rect:
         serializedVersion: 2
-        x: 1061
-        y: 859
-        width: 295
-        height: 827
+        x: 1047
+        y: 852
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +291,10 @@ TextureImporter:
       name: Player_Idle_12
       rect:
         serializedVersion: 2
-        x: 1407
-        y: 859
-        width: 298
-        height: 827
+        x: 1396
+        y: 852
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,10 +305,10 @@ TextureImporter:
       name: Player_Idle_13
       rect:
         serializedVersion: 2
-        x: 1759
-        y: 859
-        width: 295
-        height: 827
+        x: 1745
+        y: 852
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +319,10 @@ TextureImporter:
       name: Player_Idle_14
       rect:
         serializedVersion: 2
-        x: 2110
-        y: 859
-        width: 295
-        height: 827
+        x: 2094
+        y: 852
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,10 +333,10 @@ TextureImporter:
       name: Player_Idle_15
       rect:
         serializedVersion: 2
-        x: 2463
-        y: 859
-        width: 295
-        height: 827
+        x: 2443
+        y: 852
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,10 +347,10 @@ TextureImporter:
       name: Player_Idle_16
       rect:
         serializedVersion: 2
-        x: 22
-        y: 7
-        width: 297
-        height: 827
+        x: 0
+        y: 0
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: Player_Idle_17
       rect:
         serializedVersion: 2
-        x: 371
-        y: 7
-        width: 301
-        height: 827
+        x: 349
+        y: 0
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,10 +375,10 @@ TextureImporter:
       name: Player_Idle_18
       rect:
         serializedVersion: 2
-        x: 721
-        y: 8
-        width: 304
-        height: 826
+        x: 698
+        y: 0
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +389,10 @@ TextureImporter:
       name: Player_Idle_19
       rect:
         serializedVersion: 2
-        x: 1070
-        y: 8
-        width: 301
-        height: 826
+        x: 1047
+        y: 0
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: Player_Idle_20
       rect:
         serializedVersion: 2
-        x: 1419
-        y: 8
-        width: 301
-        height: 826
+        x: 1396
+        y: 0
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,10 +417,10 @@ TextureImporter:
       name: Player_Idle_21
       rect:
         serializedVersion: 2
-        x: 1767
-        y: 7
-        width: 300
-        height: 827
+        x: 1745
+        y: 0
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,10 +431,10 @@ TextureImporter:
       name: Player_Idle_22
       rect:
         serializedVersion: 2
-        x: 2114
-        y: 7
-        width: 300
-        height: 827
+        x: 2094
+        y: 0
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: Player_Idle_23
       rect:
         serializedVersion: 2
-        x: 2459
-        y: 7
-        width: 303
-        height: 826
+        x: 2443
+        y: 0
+        width: 349
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

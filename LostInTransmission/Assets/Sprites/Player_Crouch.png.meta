@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e6f13f7289e6da247a0ab4f917bfa5f9
-timeCreated: 1517096473
+timeCreated: 1517099258
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 1024
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -105,10 +105,10 @@ TextureImporter:
       name: Player_Crouch_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 861
-        width: 301
-        height: 825
+        x: 0
+        y: 853
+        width: 359
+        height: 853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,10 +119,10 @@ TextureImporter:
       name: Player_Crouch_1
       rect:
         serializedVersion: 2
-        x: 382
-        y: 861
-        width: 305
-        height: 800
+        x: 359
+        y: 853
+        width: 359
+        height: 853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,10 +133,10 @@ TextureImporter:
       name: Player_Crouch_2
       rect:
         serializedVersion: 2
-        x: 740
-        y: 861
-        width: 308
-        height: 776
+        x: 718
+        y: 853
+        width: 359
+        height: 853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Player_Crouch_3
       rect:
         serializedVersion: 2
-        x: 21
-        y: 8
-        width: 311
-        height: 751
+        x: 0
+        y: 0
+        width: 359
+        height: 853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Player_Crouch_4
       rect:
         serializedVersion: 2
-        x: 379
-        y: 8
-        width: 315
-        height: 726
+        x: 359
+        y: 0
+        width: 359
+        height: 853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: Player_Crouch_5
       rect:
         serializedVersion: 2
-        x: 734
-        y: 7
-        width: 320
-        height: 702
+        x: 718
+        y: 0
+        width: 359
+        height: 853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
