@@ -443,6 +443,58 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282872065}
+--- !u!1001 &338987848
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4517761689626970, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 198.99915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517761689626970, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 146.14177
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517761689626970, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.298604
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517761689626970, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517761689626970, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517761689626970, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517761689626970, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517761689626970, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114596886137042136, guid: 24a9459e6d59e684f99f0a4280166d85,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223767005560152126, guid: 24a9459e6d59e684f99f0a4280166d85,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 24a9459e6d59e684f99f0a4280166d85, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &379652310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,7 +2225,7 @@ MonoBehaviour:
   creditsCanvas: {fileID: 607540042}
   playButton: {fileID: 1867036227}
   creditsBackButton: {fileID: 2119833582}
-  firstLevel: Scene1
+  firstLevel: level1
 --- !u!1 &1764740615
 GameObject:
   m_ObjectHideFlags: 0
