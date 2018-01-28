@@ -1,4 +1,4 @@
-﻿﻿using System.Collections;
+﻿﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,8 +54,9 @@ public class PlayerScript : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Z) && switchTimer <= 0) {
             switchTimer = switchDelay;
-            if(beingControlled)
+            if (beingControlled) {
                 spawnSoul();
+            }
             beingControlled = !beingControlled;
         }
         if(switchTimer > 0)
