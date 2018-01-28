@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4033000408816736}
   - component: {fileID: 212112294391819422}
+  - component: {fileID: 95591883511620830}
   m_Layer: 11
   m_Name: Sprite
   m_TagString: Untagged
@@ -85,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085475074301786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.03, y: 0.67, z: 0}
   m_LocalScale: {x: 2.453406, y: 2.4534094, z: 2.4534094}
   m_Children:
   - {fileID: 4811022451677672}
@@ -99,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1154859033888470}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.03235758, y: 2.351108, z: 0}
+  m_LocalPosition: {x: -0.03129722, y: 2.313219, z: 0}
   m_LocalScale: {x: 0.6234288, y: 0.6234288, z: 0.6234288}
   m_Children: []
   m_Father: {fileID: 4677222320752956}
@@ -112,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1269697219706424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.36, y: -3.21, z: 0}
+  m_LocalPosition: {x: -3.54, y: -0.172, z: 0}
   m_LocalScale: {x: 0.58685124, y: 0.58685124, z: 0.58685124}
   m_Children:
   - {fileID: 4033000408816736}
@@ -127,8 +128,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722090010733548}
   m_LocalRotation: {x: -0, y: -0, z: -0.37827963, w: 0.9256914}
-  m_LocalPosition: {x: -0.024816958, y: 0.53902626, z: 0}
-  m_LocalScale: {x: 0.2562542, y: 0.256254, z: 0.25625393}
+  m_LocalPosition: {x: -0.024384925, y: 0.29125318, z: 0}
+  m_LocalScale: {x: 0.25625414, y: 0.2562539, z: 0.25625393}
   m_Children: []
   m_Father: {fileID: 4033000408816736}
   m_RootOrder: 0
@@ -178,6 +179,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8350992, y: 1.9942442}
   m_EdgeRadius: 0
+--- !u!95 &95591883511620830
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1085475074301786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be24b9c5ab4ac5449888b68b8f064be9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114248743989127384
 MonoBehaviour:
   m_ObjectHideFlags: 1

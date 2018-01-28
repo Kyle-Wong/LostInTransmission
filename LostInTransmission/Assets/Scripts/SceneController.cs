@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour {
     // Use this for initialization
     public GraphicColorLerp colorLerp;
 
-	void Awake () {
+	void Start () {
         if (GameData.playSceneIntro)
         {
             colorLerp.gameObject.GetComponent<Image>().enabled = true;
