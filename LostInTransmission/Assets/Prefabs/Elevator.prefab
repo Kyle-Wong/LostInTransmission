@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212663253891179944}
   - component: {fileID: 61298239264638400}
   - component: {fileID: 114376657248576828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4966034866072008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4417307731359412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 114122330896569076}
   - component: {fileID: 114818006018639234}
   - component: {fileID: 114252128695905102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4726836108819726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NodeList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4039261755684690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1924055282689316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4726836108819726}
@@ -127,9 +127,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1213538175501656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7128422, y: -1.8038602, z: -0.0146484375}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23.021166, y: -8, z: -0.024961073}
+  m_LocalScale: {x: 1.7040093, y: 1.7040093, z: 1.7040093}
   m_Children:
   - {fileID: 4464694530812388}
   - {fileID: 4726836108819726}
@@ -185,7 +185,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1151003131763846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28, y: 28, z: 0}
+  m_LocalPosition: {x: -0.28, y: 11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4726836108819726}
@@ -258,7 +258,7 @@ MonoBehaviour:
   target: {fileID: 1102991164985508}
   layerToDetect:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2048
 --- !u!114 &114252128695905102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,9 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379d47b68f787394baea0a01c20b67d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkStateToObject: 0
   linkedState: {fileID: 0}
-  playerDetector: {fileID: 114818006018639234}
   ACTIVE_STATE: 1
   INACTIVE_STATE: 0
   startNode: {fileID: 4039261755684690}

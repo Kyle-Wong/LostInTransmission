@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour {
     private float inputY = 0;
     public bool beingControlled = true;
     public LayerMask grabbablesLayer;
+    public LayerMask groundLayer;
     private bool flipped = false;
     private GameObject sprite;
     private Vector2 size;
@@ -110,21 +111,38 @@ public class PlayerScript : MonoBehaviour {
         //}
         //sprite.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, rigidBody.velocity.x * Mathf.Cos(Time.time*15));
         indicator.SetActive(beingControlled);
-        if(rigidBody.velocity.y<-rigidBody.gravityScale||rigidBody.velocity.y>1) {
-            grounded = false;
-        }
+        //if(rigidBody.velocity.y<-rigidBody.gravityScale||rigidBody.velocity.y>1) {
+        //    grounded = false;
+        //}
         if (!grounded && rigidBody.velocity.y<0) {
             animator.SetBool("Jump", false);
             animator.SetBool("Fall", true);
         }
+        GroundDetect();
 	}
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (rigidBody.velocity.y > -1) {
-            grounded = true;
-            animator.SetBool("Fall", false);
-            animator.SetBool("Jump", false);
+    private void GroundDetect() {
+		RaycastHit2D hitInformation = Physics2D.Raycast(transform.position, Vector2.down, .5f, groundLayer);
+        Debug.DrawRay(transform.position, Vector2.down);
+
+        Debug.DrawRay(transform.position, Vector2.down*hitInformation.distance, Color.red);
+        grounded = Mathf.Abs(hitInformation.distance) > 0;
+        if(grounded) {
+			animator.SetBool("Jump", false);
+			animator.SetBool("Fall", false);
         }
+
+        //hitInformation.transform.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
     }
+
+	//private void OnCollisionStay2D(Collision2D collision)
+	//{
+ //       if (rigidBody.velocity.y > -1)
+	//	{
+	//		grounded = true;
+	//		animator.SetBool("Fall", false);
+	//		animator.SetBool("Jump", false);
+	//	}
+	//}
     private void OnTriggerStay2D(Collider2D collision)
     {
         

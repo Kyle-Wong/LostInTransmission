@@ -126,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1909777499921994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.918797, y: 3.066268, z: 0}
+  m_LocalPosition: {x: 10.72, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4188190399799092}
@@ -197,6 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a891f9c34dc4d41a2359abf3cd09a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 5
+  speed: 10
   beingControlled: 1
   grabbablesLayer:
     serializedVersion: 2
