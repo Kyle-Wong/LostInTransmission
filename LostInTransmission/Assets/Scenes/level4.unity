@@ -1645,6 +1645,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61139336572721976, guid: 99773ed3764a7804ea6375ffb4b7f523,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
   m_IsPrefabParent: 0
@@ -2667,6 +2672,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10

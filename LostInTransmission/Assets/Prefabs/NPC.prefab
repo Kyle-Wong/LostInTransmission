@@ -132,6 +132,8 @@ MonoBehaviour:
   spriteObject: {fileID: 1603063982484840}
   moveSpeed: 10
   teleportDistance: 5
+  happySprite: {fileID: 21300000, guid: d15915590da5cdf4e922df68d09d80c8, type: 3}
+  sadSprite: {fileID: 21300000, guid: eba18436c4b4ac54e985e791e04c0c33, type: 3}
 --- !u!212 &212547461511297892
 SpriteRenderer:
   m_ObjectHideFlags: 1
