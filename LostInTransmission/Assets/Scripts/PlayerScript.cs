@@ -1,4 +1,4 @@
-﻿﻿using System.Collections;
+﻿﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,8 +54,9 @@ public class PlayerScript : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Z) && switchTimer <= 0) {
             switchTimer = switchDelay;
-            if(beingControlled)
+            if (beingControlled) {
                 spawnSoul();
+            }
             beingControlled = !beingControlled;
         }
         if(switchTimer > 0)
@@ -99,9 +100,14 @@ public class PlayerScript : MonoBehaviour {
         //}
         sprite.transform.rotation = transform.rotation * Quaternion.Euler(0, 0, rigidBody.velocity.x * Mathf.Cos(Time.time*15));
         indicator.SetActive(beingControlled);
+        if(rigidBody.velocity.y<-rigidBody.gravityScale||rigidBody.velocity.y>1) {
+            grounded = false;
+        }
+        Debug.Log(rigidBody.velocity.y);
 	}
     private void OnCollisionEnter2D(Collision2D collision) {
-        grounded = true;
+        if(rigidBody.velocity.y>=-1)
+		grounded = true;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
