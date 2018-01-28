@@ -11428,6 +11428,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -12101,62 +12102,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1916254757
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4032845435257530, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 12.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032845435257530, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -8.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032845435257530, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.3125
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032845435257530, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032845435257530, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032845435257530, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032845435257530, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032845435257530, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 102876947045441462, guid: b2cb22e5f62c4714b89f8b241932ae47,
-        type: 2}
-      propertyPath: m_Text
-      value: 'We are very lost,
-
-
-        Kindness eternal,
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1986736184157114, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-      propertyPath: m_Name
-      value: PoemLine (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b2cb22e5f62c4714b89f8b241932ae47, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2044869023
 GameObject:
   m_ObjectHideFlags: 0
@@ -12215,7 +12160,7 @@ SpriteRenderer:
   m_Size: {x: 1.875, y: 1.0546875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &2044869025
 Transform:
@@ -12228,5 +12173,5 @@ Transform:
   m_LocalScale: {x: 34.030334, y: 34.030308, z: 34.030308}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
