@@ -212,7 +212,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   soulPrefab: {fileID: 4831373246709434, guid: 34298143b958a7447a5d0c3ed456acc0, type: 2}
-  switchDelay: 0
+  switchDelay: 0.25
 --- !u!114 &114882785158649900
 MonoBehaviour:
   m_ObjectHideFlags: 1

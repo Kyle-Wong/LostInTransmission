@@ -9,11 +9,11 @@ public class Float : MonoBehaviour {
     public float amplitude;
     public float speed;
 	void Start () {
-        sourcePoint = transform.position;
+        sourcePoint = transform.localPosition;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = sourcePoint + Vector3.up * amplitude * Mathf.Sin(Time.time*speed);
+        transform.localPosition = sourcePoint + Vector3.up * amplitude * Mathf.Sin(Time.time*speed);
 	}
 }
