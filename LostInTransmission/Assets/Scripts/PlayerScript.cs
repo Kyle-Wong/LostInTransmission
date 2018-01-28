@@ -23,6 +23,8 @@ public class PlayerScript : MonoBehaviour {
     public float switchDelay;
     private float switchTimer;
     private Animator animator;
+    public AudioClip swapChar;
+    private AudioSource source;
 	public float maxVY = 1;
 	// Use this for initialization
 	void Start () {
@@ -40,6 +42,7 @@ public class PlayerScript : MonoBehaviour {
             }
         }
         switchTimer = 0;
+        source = GetComponent<AudioSource>();
 	}
 	// Update is called once per frame
 	void Update () {
@@ -169,5 +172,6 @@ public class PlayerScript : MonoBehaviour {
     {
         GameObject soul = Instantiate(soulPrefab, transform.position, transform.rotation).gameObject;
         soul.GetComponent<MoveToPoint>().setTarget(otherPlayer.transform);
+        source.PlayOneShot(swapChar);
     }
 }
