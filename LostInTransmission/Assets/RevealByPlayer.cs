@@ -6,7 +6,7 @@ public class RevealByPlayer : MonoBehaviour {
 
     // Use this for initialization
     TextMeshColorLerp colorLerp;
-
+    private bool dontRevealAgain = false;
 	void Start () {
         colorLerp = transform.parent.gameObject.GetComponent<TextMeshColorLerp>();
 	}
@@ -17,7 +17,7 @@ public class RevealByPlayer : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !dontRevealAgain)
         {
             colorLerp.startColorChange(1);
         }
@@ -27,6 +27,7 @@ public class RevealByPlayer : MonoBehaviour {
         if (collision.gameObject.CompareTag("Player"))
         {
             colorLerp.startColorChange(-1);
+            dontRevealAgain = true;
         }
     }
 }
