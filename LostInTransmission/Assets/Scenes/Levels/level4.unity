@@ -11272,6 +11272,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5065aee4de3a84ce3bfec6a698e92f28, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &713253635
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4979026636588882, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -20.696316
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979026636588882, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.0549684
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979026636588882, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.95703125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979026636588882, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979026636588882, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979026636588882, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979026636588882, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979026636588882, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 59619687a1ee00448ad1df794bf05fc2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &716513907
 Prefab:
   m_ObjectHideFlags: 0
@@ -11563,7 +11605,7 @@ Transform:
   m_Children:
   - {fileID: 262021399}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1106721080
 Prefab:
