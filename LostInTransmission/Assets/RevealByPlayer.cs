@@ -8,6 +8,7 @@ public class RevealByPlayer : MonoBehaviour {
     TextMeshColorLerp colorLerp;
     private bool canFadeText = false;
     private float stayDuration = 3f;
+    private bool doOnce = false;
     private List<GameObject> playerList;
 	void Start () {
         playerList = new List<GameObject>();
@@ -16,10 +17,13 @@ public class RevealByPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print(canFadeText);
         if (playerList.Count <= 0 && canFadeText)
         {
-            colorLerp.startColorChange(-1);
+            if (!doOnce)
+            {
+                colorLerp.startColorChange(-1);
+                doOnce = true;
+            }   
         }
 
     }
@@ -45,8 +49,11 @@ public class RevealByPlayer : MonoBehaviour {
     }
     private IEnumerator doText()
     {
-        colorLerp.startColorChange(1);
-        yield return new WaitForSeconds(stayDuration);
-        canFadeText = true;
+        if (!canFadeText)
+        {
+            colorLerp.startColorChange(1);
+            yield return new WaitForSeconds(stayDuration);
+            canFadeText = true;
+        }
     }
 }
