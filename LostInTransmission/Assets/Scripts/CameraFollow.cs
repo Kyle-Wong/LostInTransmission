@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour {
 	// Use this for initialization
 	private Transform currentPlayerTransform;
 	private PlayerScript [] players = new PlayerScript[2];
-	public int speed;
+	public float speed;
 	private float interval;
 	private static CameraFollow _instance;
 	private static bool isFollowing = true;
