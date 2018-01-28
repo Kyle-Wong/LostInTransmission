@@ -116,7 +116,11 @@ public class PlayerScript : MonoBehaviour {
             {
                 collision.gameObject.transform.position = transform.position + new Vector3(-.5f * transform.localScale.x, .5f, 0);
                 collision.gameObject.transform.parent = transform;
+            } else if (collision.CompareTag("Lever"))
+            {
+                collision.GetComponent<Lever>().flipLever();
             }
+
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
