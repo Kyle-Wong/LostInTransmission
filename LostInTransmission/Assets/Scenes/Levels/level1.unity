@@ -10948,7 +10948,9 @@ Prefab:
     - target: {fileID: 102876947045441462, guid: b2cb22e5f62c4714b89f8b241932ae47,
         type: 2}
       propertyPath: m_Text
-      value: "Don\u2019t leave me behind.\n"
+      value: 'Don''t leave me behind.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 102876947045441462, guid: b2cb22e5f62c4714b89f8b241932ae47,
         type: 2}
