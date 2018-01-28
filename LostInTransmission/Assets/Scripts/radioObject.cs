@@ -26,4 +26,10 @@ public class radioObject : MonoBehaviour {
 		}
 		waveEffect.transform.localScale = size;
 	}
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(Input.GetKeyDown(KeyCode.X)) {
+            
+        }
+    }
 }

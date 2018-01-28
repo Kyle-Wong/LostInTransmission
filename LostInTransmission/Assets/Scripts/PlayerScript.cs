@@ -52,6 +52,13 @@ public class PlayerScript : MonoBehaviour {
             jumpDown = Input.GetButtonDown("Jump");
             jumpUp = Input.GetButtonUp("Jump");
         }
+        if (inputY >= .8f && vertical < .8f) {
+            jumpUp = true;
+        }
+		if (vertical >= .8f && inputY < .8f)
+		{
+			jumpDown = true;
+		}
         if (Mathf.Abs(horizontal) > .2f) {
             flipped = horizontal < .1f;
             animator.SetBool("Walking", true);
