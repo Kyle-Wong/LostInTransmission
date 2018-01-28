@@ -6,43 +6,54 @@ public class RevealByPlayer : MonoBehaviour {
 
     // Use this for initialization
     TextMeshColorLerp colorLerp;
-    private bool revealText = false;
-    private bool dontRevealAgain = false;
+    private bool canFadeText = false;
     private float stayDuration = 3f;
-    private float stayTimer;
+    private bool doOnce = false;
+    private List<GameObject> playerList;
 	void Start () {
+        playerList = new List<GameObject>();
         colorLerp = transform.parent.gameObject.GetComponent<TextMeshColorLerp>();
-        stayTimer = stayDuration;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (stayTimer > 0 && revealText)
+        if (playerList.Count <= 0 && canFadeText)
         {
-            stayTimer -= Time.deltaTime;
-            colorLerp.startColorChange(1);
-
-        } else if(stayTimer <= 0 && revealText)
-        {
-            revealText = false;
-            colorLerp.startColorChange(-1);
-            dontRevealAgain = true;
-
+            if (!doOnce)
+            {
+                colorLerp.startColorChange(-1);
+                doOnce = true;
+            }   
         }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !dontRevealAgain)
+
+        if (collision.gameObject.CompareTag("Player"))
         {
-            revealText = true;
+            if (!playerList.Contains(collision.gameObject))
+            {
+                playerList.Add(collision.gameObject);
+                StartCoroutine(doText());
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            dontRevealAgain = true;
+            playerList.Remove(collision.gameObject);
+            
+        }
+    }
+    private IEnumerator doText()
+    {
+        if (!canFadeText)
+        {
+            colorLerp.startColorChange(1);
+            yield return new WaitForSeconds(stayDuration);
+            canFadeText = true;
         }
     }
 }
