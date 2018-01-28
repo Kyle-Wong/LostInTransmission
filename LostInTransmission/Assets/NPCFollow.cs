@@ -15,6 +15,8 @@ public class NPCFollow : MonoBehaviour {
     public float moveSpeed;
     private Vector3 posLastFrame;
     public float teleportDistance;
+    public Sprite happySprite;
+    public Sprite sadSprite;
 	void Start () {
         spriteRenderer = spriteObject.GetComponent<SpriteRenderer>();
 	}
@@ -43,7 +45,10 @@ public class NPCFollow : MonoBehaviour {
             
             spriteRenderer.flipX = (player.getDirection() == 1);
             spriteObject.transform.rotation = transform.rotation * Quaternion.Euler(0, 0,  moveVector.x*50* Mathf.Cos(Time.time * 15+Mathf.PI));
-            
+            spriteRenderer.sprite = happySprite;
+        } else
+        {
+            spriteRenderer.sprite = sadSprite;
         }
     }
     
