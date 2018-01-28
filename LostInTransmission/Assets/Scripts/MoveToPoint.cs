@@ -26,7 +26,7 @@ public class MoveToPoint : MonoBehaviour {
             }
             else
             {
-                transform.position += (target.position - transform.position) * moveSpeed * Time.deltaTime;
+                transform.position += (target.position - transform.position).normalized * moveSpeed * Time.deltaTime;
             }
         }
     }
