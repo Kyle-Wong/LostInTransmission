@@ -160,7 +160,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1986736184157114}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f18d387fc475fa048aa4b64c333c4e21, type: 3}
   m_Name: 
@@ -168,6 +168,33 @@ MonoBehaviour:
   lines:
   - Whatever Happens,
   - Wherever the path takes us,
+  - "When we\u2019re together"
+  - The cold worldl around us
+  - Cannot trap us both.
+  - 'If you must leave, fine, '
+  - ' But please, just remember me. '
+  - ' And try to return. '
+  - ' We will keep going. '
+  - ' If anyone is out there, '
+  - ' They will find us both. '
+  - ' How did we get here? '
+  - " I don\u2019t recognize this place. "
+  - ' It seems so foreign. '
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
+  - Don't leave me behind.
   - Don't leave me behind.
   poemNumber: 0
   lineNumber: 0
