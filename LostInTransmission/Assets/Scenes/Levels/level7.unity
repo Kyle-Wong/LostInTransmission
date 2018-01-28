@@ -104762,7 +104762,7 @@ Prefab:
     - target: {fileID: 114753197904590402, guid: b6d2ae26f28147648b1cab016eb694e2,
         type: 2}
       propertyPath: forceOverride
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114753197904590402, guid: b6d2ae26f28147648b1cab016eb694e2,
         type: 2}
