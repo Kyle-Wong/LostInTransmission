@@ -122,9 +122,7 @@ public class PlayerScript : MonoBehaviour {
 	}
     private void GroundDetect() {
 		RaycastHit2D hitInformation = Physics2D.Raycast(transform.position, Vector2.down, .5f, groundLayer);
-        Debug.DrawRay(transform.position, Vector2.down);
 
-        Debug.DrawRay(transform.position, Vector2.down*hitInformation.distance, Color.red);
         grounded = Mathf.Abs(hitInformation.distance) > 0;
         if(grounded) {
 			animator.SetBool("Jump", false);
