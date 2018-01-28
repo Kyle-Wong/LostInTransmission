@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour {
 
 	//NOTE: you will need to query Kyle's delay
 	// Use this for initialization
+	private Transform currentPlayerTransform;
 	private PlayerScript [] players = new PlayerScript[2];
 	public int speed;
 	private float interval;
