@@ -11433,7 +11433,7 @@ Transform:
   m_Children:
   - {fileID: 262021399}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1106721080
 Prefab:
@@ -11789,3 +11789,45 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 428484429}
   m_Script: {fileID: 11500000, guid: c32275b6aa14e89498bc2b9156826e06, type: 3}
+--- !u!1001 &2026539226
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4079404827322026, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079404827322026, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -8.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079404827322026, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079404827322026, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079404827322026, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079404827322026, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079404827322026, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079404827322026, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 99773ed3764a7804ea6375ffb4b7f523, type: 2}
+  m_IsPrefabParent: 0
