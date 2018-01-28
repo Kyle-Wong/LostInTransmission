@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1269697219706424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2399538, y: 6.7720904, z: 0}
+  m_LocalPosition: {x: -23.928087, y: 3.1591678, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4033000408816736}
@@ -166,8 +166,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.63}
-  m_Size: {x: 0.5, y: 1.94}
+  m_Offset: {x: 0.013171196, y: 0.63}
+  m_Size: {x: 0.8884678, y: 1.94}
   m_Direction: 0
 --- !u!95 &95591883511620830
 Animator:
@@ -197,12 +197,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a891f9c34dc4d41a2359abf3cd09a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 4
   speed: 10
   beingControlled: 0
   grabbablesLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 131328
   soulPrefab: {fileID: 4831373246709434, guid: 34298143b958a7447a5d0c3ed456acc0, type: 2}
   switchDelay: 0.25
 --- !u!114 &114923132093315148
