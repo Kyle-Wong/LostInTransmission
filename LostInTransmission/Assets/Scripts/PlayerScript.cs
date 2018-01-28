@@ -23,6 +23,7 @@ public class PlayerScript : MonoBehaviour {
     public float switchDelay;
     private float switchTimer;
     private Animator animator;
+	public float maxVY = 1;
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -126,6 +127,7 @@ public class PlayerScript : MonoBehaviour {
             animator.SetBool("Fall", true);
         }
         GroundDetect();
+        if (rigidBody.velocity.y < -maxVY) rigidBody.velocity = new Vector2(rigidBody.velocity.x, -maxVY);
 	}
     private void GroundDetect() {
 		RaycastHit2D hitInformation = Physics2D.Raycast(transform.position, Vector2.down, .5f, groundLayer);

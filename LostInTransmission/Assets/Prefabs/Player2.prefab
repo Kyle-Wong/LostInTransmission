@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1269697219706424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.41481, y: -16.987822, z: 0}
+  m_LocalPosition: {x: -17.58, y: -14.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4033000408816736}
@@ -208,6 +208,7 @@ MonoBehaviour:
     m_Bits: 131328
   soulPrefab: {fileID: 4831373246709434, guid: 34298143b958a7447a5d0c3ed456acc0, type: 2}
   switchDelay: 0.25
+  maxVY: 20
 --- !u!114 &114923132093315148
 MonoBehaviour:
   m_ObjectHideFlags: 1
