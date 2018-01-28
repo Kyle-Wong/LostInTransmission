@@ -70,7 +70,6 @@ GameObject:
   - component: {fileID: 61905796841697222}
   - component: {fileID: 114122330896569076}
   - component: {fileID: 114818006018639234}
-  - component: {fileID: 114252128695905102}
   m_Layer: 0
   m_Name: PlayerDetector
   m_TagString: Untagged
@@ -114,9 +113,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1924055282689316}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 4726836108819726}
   m_RootOrder: 0
@@ -127,9 +126,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1213538175501656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7128422, y: -1.8038602, z: -0.0146484375}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.8, y: 4.65, z: -0.024961073}
+  m_LocalScale: {x: 1.7040093, y: 1.7040093, z: 1.7040093}
   m_Children:
   - {fileID: 4464694530812388}
   - {fileID: 4726836108819726}
@@ -156,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1102991164985508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35715783, y: -0.5461397, z: 0.0146484375}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4439704714992282}
@@ -170,7 +169,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1838294279082822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35715783, y: -0.5461397, z: 0.0146484375}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4039261755684690}
@@ -184,9 +183,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1151003131763846}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28, y: 28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.94, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 4726836108819726}
   m_RootOrder: 1
@@ -259,19 +258,6 @@ MonoBehaviour:
   layerToDetect:
     serializedVersion: 2
     m_Bits: 1
---- !u!114 &114252128695905102
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1276588003293022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832f7f830547d35468cac51ad6cdc062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DETECTED: 1
-  NOT_DETECTED: 0
 --- !u!114 &114376657248576828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,9 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379d47b68f787394baea0a01c20b67d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkStateToObject: 0
   linkedState: {fileID: 0}
-  playerDetector: {fileID: 114818006018639234}
   ACTIVE_STATE: 1
   INACTIVE_STATE: 0
   startNode: {fileID: 4039261755684690}
