@@ -13,11 +13,15 @@ public class Elevator : MonoBehaviour {
     public Transform startNode;
     public Transform endNode;
     public float moveSpeed;
+    public bool differentReturnSpeed;
+    public float returnSpeed;
+    private float originalSpeed;
     void Awake()
     {
 
         transform.position = startNode.position;
         occupants = new List<Transform>();
+        originalSpeed = moveSpeed;
     }
 
     // Update is called once per frame
@@ -26,9 +30,13 @@ public class Elevator : MonoBehaviour {
         
             if (linkedState.getState() == ACTIVE_STATE)
             {
+                if (differentReturnSpeed)
+                    moveSpeed = originalSpeed;
                 movePlatform(endNode.position);
             } else
             {
+                if (differentReturnSpeed)
+                    moveSpeed = returnSpeed;
                 movePlatform(startNode.position);
             }
         
