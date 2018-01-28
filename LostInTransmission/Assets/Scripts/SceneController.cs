@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour {
     public GraphicColorLerp colorLerp;
 
 	void Awake () {
-        if (true || GameData.playSceneIntro)
+        if (GameData.playSceneIntro)
         {
             colorLerp.GetComponent<Image>().enabled = true;
             colorLerp.setColors(Color.black, new Color(0, 0, 0, 0));
@@ -35,6 +35,7 @@ public class SceneController : MonoBehaviour {
         colorLerp.startColorChange();
         
         yield return new WaitForSeconds(delay);
+        GameData.playSceneIntro = introTransition;
         SceneManager.LoadScene(sceneName);
     }
 }
