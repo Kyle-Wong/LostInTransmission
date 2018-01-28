@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour {
     private float jumpForce = 4f;
     private Rigidbody2D rigidBody;
     private float vx = 0;
-    private float speed = 7f;
+    private float speed = 10f;
     private bool grounded = false;
     private bool crouching = false;
     private float inputY = 0;
