@@ -9,8 +9,8 @@ public class radioObject : MonoBehaviour {
     private Vector2 maxSize;
     private Vector2 size;
     public bool forceOn = false;
-    public AudioClip sound1;
     private AudioSource source;
+
     // Use this for initialization
     void Start () {
         sceneParent = transform.parent;
@@ -25,7 +25,10 @@ public class radioObject : MonoBehaviour {
         if (forceOn)
         {
             waveEffect.transform.localScale = maxSize * 2;
-            source.Play();
+            if (!source.isPlaying)
+            {
+                source.Play();
+            }
         }
         else
         {
@@ -37,7 +40,10 @@ public class radioObject : MonoBehaviour {
             else
             {
                 size += (new Vector2(maxSize.x, maxSize.y) - size) / 10;
-                source.Play();
+                if (!source.isPlaying)
+                {
+                    source.Play();
+                }
             }
             waveEffect.transform.localScale = size;
         }
