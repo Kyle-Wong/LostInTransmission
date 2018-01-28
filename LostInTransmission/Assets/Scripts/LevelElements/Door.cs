@@ -12,7 +12,7 @@ public class Door : MonoBehaviour {
     private State state;
     private BoxCollider2D col;
     private ColorLerp colorLerp;
-
+    public bool useColorLerp = false;
     Animator anim;
 	void Start () {
         state = GetComponent<State>();
@@ -40,14 +40,16 @@ public class Door : MonoBehaviour {
     {
         col.enabled = false;
         state.setState(openState);
-        colorLerp.startColorChange(1);
+        if(useColorLerp)
+            colorLerp.startColorChange(1);
         anim.SetBool("Is_Open", true);
     }
     public void closeDoor()
     {
         col.enabled = true;
         state.setState(closedState);
-        colorLerp.startColorChange(-1);
+        if(useColorLerp)
+            colorLerp.startColorChange(-1);
         anim.SetBool("Is_Open", false);
 
     }
