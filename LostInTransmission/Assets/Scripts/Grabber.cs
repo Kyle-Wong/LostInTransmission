@@ -11,6 +11,9 @@ public class Grabber : MonoBehaviour {
     private bool newInput = true;
     public float offsetX = -.5f;
     public float offsetY = .5f;
+    public AudioClip grabThing;
+    public AudioClip flipSwitch;
+    private AudioSource source;
     public enum OnObject
     {
         Player, Terminal
@@ -19,6 +22,7 @@ public class Grabber : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         sceneParent = transform.parent;
+        source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -51,6 +55,7 @@ public class Grabber : MonoBehaviour {
                             collision.gameObject.transform.parent = transform;
                             grabbed = collision.gameObject;
                             grabbing = true;
+                            source.PlayOneShot(grabThing);
                         }
                         else
                         {
@@ -66,6 +71,7 @@ public class Grabber : MonoBehaviour {
                                     collision.gameObject.transform.parent = transform;
                                     grabbed = collision.gameObject;
                                     grabbing = true;
+                                    source.PlayOneShot(grabThing);
                                 }
                             }catch
                             {
@@ -95,8 +101,11 @@ public class Grabber : MonoBehaviour {
                 switch (thisObject)
                 {
                     case (OnObject.Player):
-                        if(GetComponent<PlayerScript>().beingControlled)
+                        if (GetComponent<PlayerScript>().beingControlled)
+                        {
                             collision.GetComponent<Lever>().flipLever();
+                            source.PlayOneShot(flipSwitch);
+                        }
                         break;
                     case (OnObject.Terminal):
                         //terminals can't pull levers

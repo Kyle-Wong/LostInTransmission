@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114754430237698100}
   - component: {fileID: 61786383106797610}
   - component: {fileID: 114326967007723226}
+  - component: {fileID: 95283330163811700}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Lever
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1314103162596180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.39, y: -14.83, z: 0.027222134}
+  m_LocalPosition: {x: 3.027, y: 0.643, z: 0.027222134}
   m_LocalScale: {x: 0.62585795, y: 0.62585795, z: 0.62585795}
   m_Children:
   - {fileID: 4826676019099580}
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1362030408361498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.47, z: 0}
+  m_LocalPosition: {x: 0, y: 2.6586297, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4061090129815172}
@@ -89,19 +90,36 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.015002534, y: -0.1396003}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.57, y: 2.8}
+    oldSize: {x: 0.6796875, y: 0.5488281}
     newSize: {x: 2.45, y: 2.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.45, y: 2.27}
+  m_Size: {x: 0.44081876, y: 0.19532496}
   m_EdgeRadius: 0
+--- !u!95 &95283330163811700
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314103162596180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 254373c92a53fef4d93188b0351ae4f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114155920357931966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,8 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8cbd6d4abf96e488268d88a73bdfa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeSprite: {fileID: 21300000, guid: 5725ef45ee70e2447b74a2b6baa1a0d3, type: 3}
-  inactiveSprite: {fileID: 21300000, guid: 0fd748c4f822b26448002d34c3073525, type: 3}
 --- !u!212 &212042415523681676
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -262,7 +278,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0fd748c4f822b26448002d34c3073525, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49c2dd86abaf44f4f86bcf17da25404b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

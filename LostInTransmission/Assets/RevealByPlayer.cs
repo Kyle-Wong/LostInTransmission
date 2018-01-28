@@ -34,8 +34,12 @@ public class RevealByPlayer : MonoBehaviour {
         {
             if (!playerList.Contains(collision.gameObject))
             {
+                if(playerList.Count == 0)
+                {
+                    StartCoroutine(doText());
+                }
                 playerList.Add(collision.gameObject);
-                StartCoroutine(doText());
+                
             }
         }
     }

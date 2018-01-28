@@ -9,10 +9,12 @@ public class LoadNextLevel : MonoBehaviour {
     public int levelNumber;
     public bool forceOverride = false;
     public string overrideLevelName;
+    private AudioSource source;
 	void Start () {
         playerList = new List<GameObject>();
         string sceneName = SceneManager.GetActiveScene().name;
         int.TryParse(sceneName.Substring(sceneName.Length - 1), out levelNumber);
+        source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -35,10 +37,12 @@ public class LoadNextLevel : MonoBehaviour {
             }
             if (forceOverride)
             {
+                source.Play(0);
                 StartCoroutine(SceneController.transitionThenLoad(overrideLevelName, 0.3f, true));
             }
             else
             {
+                source.Play(0);
                 StartCoroutine(SceneController.transitionThenLoad("level" + (levelNumber + 1), 0.3f, true));
             }
         }

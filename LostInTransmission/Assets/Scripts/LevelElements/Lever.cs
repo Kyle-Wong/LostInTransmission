@@ -8,12 +8,13 @@ public class Lever : MonoBehaviour {
     private State state;
     private const int ACTIVE = 1;
     private const int INACTIVE = 0;
-    public Sprite activeSprite;
-    public Sprite inactiveSprite;
-    SpriteRenderer spriteRenderer;
+
+    //animator
+
+    Animator anim;
 	void Start () {
         state = GetComponent<State>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -24,12 +25,14 @@ public class Lever : MonoBehaviour {
     {
         if(state.getState() == ACTIVE)
         {
+            anim.SetBool("Is_Open", false);
             state.setState(INACTIVE);
-            spriteRenderer.sprite = inactiveSprite;
+           
         } else
         {
+            anim.SetBool("Is_Open", true);
             state.setState(ACTIVE);
-            spriteRenderer.sprite = activeSprite;
+            
         }
     }
 }
