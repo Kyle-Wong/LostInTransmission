@@ -1040,11 +1040,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4290476379361932, guid: a2b1d066c61b14d52b19da5ab9a8aeb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.8
+      value: -22.12
       objectReference: {fileID: 0}
     - target: {fileID: 4290476379361932, guid: a2b1d066c61b14d52b19da5ab9a8aeb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.1
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 4290476379361932, guid: a2b1d066c61b14d52b19da5ab9a8aeb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1089,11 +1089,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2b1d066c61b14d52b19da5ab9a8aeb7, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &732082676 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4290476379361932, guid: a2b1d066c61b14d52b19da5ab9a8aeb7,
-    type: 2}
-  m_PrefabInternal: {fileID: 726017926}
 --- !u!1001 &770737540
 Prefab:
   m_ObjectHideFlags: 0
@@ -1688,7 +1683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c2689fef26bbf4691d90a50979fe60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPlayerTransform: {fileID: 732082676}
   speed: 1
 --- !u!114 &1043989192 stripped
 MonoBehaviour:
@@ -2233,11 +2227,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4290476379361932, guid: a2b1d066c61b14d52b19da5ab9a8aeb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 64.3
+      value: -20.44
       objectReference: {fileID: 0}
     - target: {fileID: 4290476379361932, guid: a2b1d066c61b14d52b19da5ab9a8aeb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.6
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 4290476379361932, guid: a2b1d066c61b14d52b19da5ab9a8aeb7, type: 2}
       propertyPath: m_LocalPosition.z
