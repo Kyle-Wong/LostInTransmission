@@ -7,6 +7,8 @@ public class LoadNextLevel : MonoBehaviour {
     // Use this for initialization
     private List<GameObject> playerList;
     public int levelNumber;
+    public bool forceOverride = false;
+    public string overrideLevelName;
 	void Start () {
         playerList = new List<GameObject>();
         string sceneName = SceneManager.GetActiveScene().name;
@@ -26,7 +28,14 @@ public class LoadNextLevel : MonoBehaviour {
         }
         if (playerList.Count >= 2)
         {
-            StartCoroutine(SceneController.transitionThenLoad("level" + (levelNumber + 1), 0.3f, true));
+            if (forceOverride)
+            {
+                StartCoroutine(SceneController.transitionThenLoad(overrideLevelName, 0.3f, true));
+            }
+            else
+            {
+                StartCoroutine(SceneController.transitionThenLoad("level" + (levelNumber + 1), 0.3f, true));
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

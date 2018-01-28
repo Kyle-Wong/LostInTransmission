@@ -12,7 +12,9 @@ public class CameraFollow : MonoBehaviour {
 	private float interval;
 	private static CameraFollow _instance;
 	private static bool isFollowing = true;
-
+    public Vector3 offset;
+    public Vector2 min = new Vector2(-1000,-1000);
+    public Vector2 max = new Vector2(1000,1000);
 	void Awake() {
 		GameObject[] player_objs = GameObject.FindGameObjectsWithTag("Player");
 		Debug.Assert(player_objs.Length == 2);
@@ -29,7 +31,7 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		updatePlayer();
-		Vector2 playerPos = currentPlayerTransform.position;
+        Vector2 playerPos = currentPlayerTransform.position + offset;
 		Vector2 cameraPos = transform.position;
 
 		Vector2 delta = (playerPos - cameraPos) / interval * Time.deltaTime;
@@ -41,12 +43,16 @@ public class CameraFollow : MonoBehaviour {
 		
 		Vector2 before_translate_dir = delta.normalized, 
 		        new_pos = transform.position + new Vector3(delta.x, delta.y, 0f),
-				playerPos = new Vector2(currentPlayerTransform.position.x, currentPlayerTransform.position.y),
+        playerPos = new Vector2(currentPlayerTransform.position.x + offset.x, currentPlayerTransform.position.y + offset.y),
 		        after_translate_dir = (playerPos - new_pos).normalized;
 
 		new_pos = Vector2.Dot(before_translate_dir, after_translate_dir) >= 0 ?  new_pos :
 		                                                                         playerPos;
+		var verticalSize = Camera.main.orthographicSize * 2.0;
+		var horizontalSize = verticalSize * Screen.width / Screen.height;
 
+        new_pos.x = Mathf.Clamp(new_pos.x, min.x, max.x);
+        new_pos.y = Mathf.Clamp(new_pos.y, min.y, max.y);
 		transform.position = new Vector3(new_pos.x, new_pos.y, transform.position.z);
 	}
 

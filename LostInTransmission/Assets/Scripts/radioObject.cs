@@ -8,9 +8,9 @@ public class radioObject : MonoBehaviour {
     private GameObject waveEffect;
     private Vector2 maxSize;
     private Vector2 size;
-
-	// Use this for initialization
-	void Start () {
+    public bool forceOn = false;
+    // Use this for initialization
+    void Start () {
         sceneParent = transform.parent;
         waveEffect = transform.Find("waveEffect").gameObject;
         maxSize = waveEffect.transform.localScale;
@@ -19,17 +19,22 @@ public class radioObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(transform.parent == sceneParent) {
-            size += (new Vector2(0, 0) - size) / 10;
-        } else {
-            size += (new Vector2(maxSize.x, maxSize.y) - size) / 10;
-		}
-		waveEffect.transform.localScale = size;
-	}
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(Input.GetKeyDown(KeyCode.X)) {
-            
+        if (forceOn)
+        {
+            waveEffect.transform.localScale = maxSize * 2;
         }
-    }
+        else
+        {
+            if (transform.parent == sceneParent)
+            {
+                size += (new Vector2(0, 0) - size) / 10;
+            }
+            else
+            {
+                size += (new Vector2(maxSize.x, maxSize.y) - size) / 10;
+            }
+            waveEffect.transform.localScale = size;
+        }
+	}
+    
 }
